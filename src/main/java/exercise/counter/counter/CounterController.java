@@ -12,7 +12,7 @@ public class CounterController {
 
     @GetMapping("/count")
     public CounterResponseDto getCount() {
-        return new CounterResponseDto(counterService.incrementAndGet());
+        return new CounterResponseDto(counterService.getCount());
     }
 
     @Scheduled(fixedDelay = 10000)  // 10초마다
